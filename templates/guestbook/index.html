@@ -1,0 +1,13 @@
+{% for greeting in greetings %}
+<br>
+<small>[<i>{{ greeting.date.ctime }}</i>]</small>
+<b>
+{% if greeting.author %}
+<code>{{ greeting.author.username }}</code>
+{% else %}
+<i>anonymous</i>
+{% endif %}
+</b>
+wrote:
+{{ greeting.content }}
+{% endfor %}
