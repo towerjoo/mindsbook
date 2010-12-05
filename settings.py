@@ -4,13 +4,14 @@
 from djangoappengine.settings_base import *
 
 import os
+ROOT_PATH = os.path.abspath(os.path.dirname(__file__))
 
 SECRET_KEY = '=r-$b*8hglm+858&9t043hlm6-&6-3d3vfc4((7yd0dbrakhvi'
 
 INSTALLED_APPS = (
     'djangoappengine',
-#    'django.contrib.admin',
-#    'django.contrib.auth',
+    'django.contrib.admin',
+    'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'djangotoolbox',
@@ -27,7 +28,8 @@ STATICFILES_DIRS = (
     os.path.join(os.path.dirname(__file__), 'static'),
 )
 STATICFILES_URL = '/media/'
-MEDIA_URL = '/files/'
+MEDIA_URL = '/static/'
+MEDIA_ROOT = os.path.join(ROOT_PATH, "static")
 TEMPLATE_DIRS = (os.path.join(os.path.dirname(__file__), 'templates'),)
 
 ROOT_URLCONF = 'urls'
