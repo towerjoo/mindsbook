@@ -1,9 +1,7 @@
 # Create your views here.
 from django.core.cache import cache
 from django.views.generic.simple import direct_to_template
-from guestbook.forms import CreateGreetingForm
-from guestbook.models import Greeting
-from django.http import HttpRsponse
+from django.http import HttpResponse
 
 def hello(request):
-    return HttpRsponse("hello world")
+    return HttpResponse("hello world")

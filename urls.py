@@ -5,5 +5,5 @@ handler500 = 'djangotoolbox.errorviews.server_error'
 urlpatterns = patterns('',
     #('^$', 'django.views.generic.simple.direct_to_template',
     # {'template': 'home.html'}),
-    r('^hello/$', 'guestbook.views.hello'),
+    (r'^hello/$', 'guestbook.views.hello'),
 )
